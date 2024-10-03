@@ -76,7 +76,7 @@ Holds the rating levels (e.g., 1-5) for employee performance.
 
 The FactPerformanceRating table is connected to:
 - **DimEmployee** using **EmployeeID**.
-- **DimEducationLevel through **EducationLevelID** (indirectly through DimEmployee).
+- **DimEducationLevel** through **EducationLevelID** (indirectly through DimEmployee).
 - **DimDate** via the **ReviewDate**.
-- **DimSatisfactionLevel using **SatisfactionID**.
+- **DimSatisfactionLevel** using **SatisfactionID**.
 - **DimRatingLevel** using **RatingID**.
