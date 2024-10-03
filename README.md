@@ -43,3 +43,40 @@ During my analysis, I developed an **HR, Attrition, and Demographics Dashboard**
 **Overtime Impact**: Employees who work **overtime** are much more likely to **leave**, as indicated by the higher attrition rates among those who report working overtime.
 
 ![Screenshot 2024-09-12 115708](https://github.com/user-attachments/assets/56cc8e3a-2fbd-4c56-852f-a798820be1ae)
+
+## 🛠 Data Model Structure
+The data model used in this report was custom-built to streamline the relationship between fact and dimension tables. The relationships provide a foundation for deeper analysis of HR Analysis of Atlas Lab.
+
+
+**Fact Table**:
+
+- **FactPerformanceRating**:
+This Fact contains performance review data, such as employee ratings, satisfaction, and review dates.
+
+**Dimension Tables**:
+
+- **DimEmployee**:
+Stores employee details like age, department, education, and distance from home.
+
+- **DimEducationLevel**:
+Contains the education levels (e.g., Bachelor’s, Master’s).
+
+- **DimDate**:
+Provides date-related information (e.g., day, month, year) for tracking when reviews happened.
+
+- **DimSatisfactionLevel**:
+
+Lists the satisfaction levels (e.g., Low, Medium, High) for employee reviews.
+
+- **DimRatingLevel**:
+
+Holds the rating levels (e.g., 1-5) for employee performance.
+
+**Fact-Dimension Relationships**:
+
+The FactPerformanceRating table is connected to:
+- **DimEmployee** using **EmployeeID**.
+- **DimEducationLevel through **EducationLevelID** (indirectly through DimEmployee).
+- **DimDate** via the **ReviewDate**.
+- **DimSatisfactionLevel using **SatisfactionID**.
+- **DimRatingLevel** using **RatingID**.
